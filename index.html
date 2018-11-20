@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <title>Price Comparator</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="Price Comparator" />
+        <meta name="keywords" content="tabs, css3, transition, checked, pseudo-class, label, css-only, sibling combinator" />
+        <meta name="author" content="Codrops" />
+        <link rel="shortcut icon" href="../favicon.ico"> 
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+		<script type="text/javascript" src="js/modernizr.custom.04022.js"></script>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300,300italic' rel='stylesheet' type='text/css'>
+		<!--[if lt IE 9]>
+			<style>
+				.content{
+					height: auto;
+					margin: 0;
+				}
+				.content div {
+					position: relative;
+				}
+			</style>
+		<![endif]-->
+    </head>
+    <body style="background-image: url(Comparison.jpg);background-size: 100% 100%">
+        <div class="container">
+			<!-- Codrops top bar -->
+            <div class="codrops-top">
+               <!-- <a href="http://tympanus.net/TipsTricks/DirectionAwareHoverEffect/">
+                    <strong>&laquo; Previous Demo: </strong>Direction-Aware Hover Effect
+                </a>-->
+                <span class="right">
+					<a href="/WT/sign_up.html">
+						<strong>Sign Up</strong>
+					</a>
+                    <a href="/WT/login.html">
+                        <strong>Login</strong>
+                    </a>
+                </span>
+                <div class="clr"></div>
+            </div><!--/ Codrops top bar -->
+			<header>
+				<h1>Price<span>&nbsp;Comparator</span></h1>
+				<h2 style="color: black;font-weight: bold">Get the required item for your price</h2>
+				<nav class="codrops-demos">
+					<span style="color:#0090ff; font-weight:bold; font-size:25px">Let's Begin</span>
+					<form action = 'compare.php' method = 'post'>
+						<input type="text" name="product"/>
+						<input type="submit" value = "Search" name="search_submit">
+					</form>
+					
+				</nav>
+			</header>
+			<section class="tabs">
+	            <input id="tab-1" type="radio" name="radio-set" class="tab-selector-1" checked="checked" />
+		        <label for="tab-1" class="tab-label-1">About</label>
+		
+	            <input id="tab-2" type="radio" name="radio-set" class="tab-selector-2" />
+		        <label for="tab-2" class="tab-label-2">Categories</label>
+		
+	            <input id="tab-3" type="radio" name="radio-set" class="tab-selector-3" />
+		        <label for="tab-3" class="tab-label-3">Work</label>
+			
+	            <input id="tab-4" type="radio" name="radio-set" class="tab-selector-4" />
+				<label for="tab-4" class="tab-label-4">Contact</label>
+				
+            
+			    <div class="clear-shadow"></div>
+				
+		        <div class="content">
+			        <div class="content-1">
+						<h2>About us</h2>
+                        <p>We have created this platform for you to come here, look for an item at the price you want it!</p>
+						<h3>How we work</h3>
+						<p>What we do is,for the item you want,search the various e-commerce websites for that particular item and show it to you.You choose the item with the desired price and features.</p>
+				    </div>
+			        <div class="content-2">
+						<h2>Categories</h2>
+                        <p>
+                        <ul style="font-weight: bold; font-size: 14px">
+					        <li><span id="tc_27"> </span><!----<a href="http://www.pricegrabber.com/appliances/browse/" title="" class="topcat dd">Phones</a>--></li>
+					        <li><span id="tc_26"> </span><!----<a href="http://www.pricegrabber.com/automotiveparts/browse/" title="" class="topcat dd">Shoes</a>--></li>
+					       
+    					</ul>
+						</p>
+						<h3>Popular</h3>
+						<p>
+						<ul style = "font-weight: bold; font-size: 14px">
+					        <li><span id="tc_27"> </span><!----<a href="http://www.pricegrabber.com/appliances/browse/" title="" class="topcat dd">Phones</a>--></li>
+    					</ul>
+						</p>
+				    </div>
+			        <div class="content-3">
+						<h2>Portfolio</h2>
+                        <p>The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother's keeper and the finder of lost children.<br> And I will strike down upon thee with great vengeance and furious anger those who would attempt to poison and destroy My brothers. And you will know My name is the Lord when I lay My vengeance upon thee.</p>
+						
+				    </div>
+				    <div class="content-4">
+						<h2>Contact</h2>
+						<p>For Contact Purposes
+							<a href="#contact1">Visit us on</a></br>
+							<a href="wt_star.html">Let's Rate the website</a>
+						</p>
+				    </div>
+		        </div>
+			</section>
+        </div>
+    </body>
+    <footer>
+    		
+    <iframe id = "contact1" style="z-index: 0; border: 0px" src="hover.html" height="369.467px" width = "1287px">
+    </iframe>
+    </footer>
+</html>

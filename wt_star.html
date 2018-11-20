@@ -1,0 +1,213 @@
+<!doctype html>
+<html>
+<head>
+<style>
+    body{ background-color: ivory; }
+    canvas{border:1px ; }
+    
+    #sidebar1 {
+    display: none;
+}
+.a:hover #sidebar1 {
+    background-color:DarkRed ;
+    display:block;
+}
+#sidebar2 {
+    display: none;
+}
+.b:hover #sidebar2 {
+background-color:IndianRed ;
+    display:block;
+}
+#sidebar3 {
+    display: none;
+}
+.c:hover #sidebar3 {
+background-color:GreenYellow ;
+    display:block;
+}
+#sidebar4 {
+
+    display: none;
+}
+.d:hover #sidebar4 {
+background-color:Chartreuse;
+    display:block;
+}
+#sidebar5 {
+    display: none;
+}
+.e:hover #sidebar5 {
+background-color:DarkGreen;
+    display:block;
+}
+#popup {
+  display:none;
+}
+   
+
+</style>
+<script>
+var clicked = 0;
+function myfunc(){
+    drawStar(27,40,5,16,8,"1");
+    drawStar(27,40,5,16,8,"2");
+    drawStar(27,40,5,16,8,"3");
+    drawStar(27,40,5,16,8,"4");
+    drawStar(27,40,5,16,8,"5");
+    
+}
+
+function newstar(id){
+        	
+     	if(id >= 1){
+     	myNode = document.getElementById("1");
+     	while (myNode.firstChild) {
+   			 myNode.removeChild(myNode.firstChild);
+				}
+	drawStary(27,40,5,16,8,"1");
+				}
+       	
+        if(id >= 2){
+       	myNode = document.getElementById("2");
+     	while (myNode.firstChild) {
+   			 myNode.removeChild(myNode.firstChild);
+				}
+       	drawStary(27,40,5,16,8,"2");
+       	}
+       	if(id >= 3){
+       	myNode = document.getElementById("3");
+     	while (myNode.firstChild) {
+   			 myNode.removeChild(myNode.firstChild);
+				}
+       	drawStary(27,40,5,16,8,"3");
+       	}
+       	if(id >= 4){
+       	myNode = document.getElementById("4");
+     	while (myNode.firstChild) {
+   			 myNode.removeChild(myNode.firstChild);
+				}
+       	drawStary(27,40,5,16,8,"4");
+       	}
+       	if(id >= 5){
+       	myNode = document.getElementById("5");
+     	while (myNode.firstChild) {
+   			 myNode.removeChild(myNode.firstChild);
+				}
+       	drawStary(27,40,5,16,8,"5");
+       	}
+     
+     }
+
+function drawStary(cx,cy,spikes,outerRadius,innerRadius,id){
+	 canvas = document.createElement('canvas');
+	 a = []
+        ctx=canvas.getContext("2d");
+        canvas.id = "lol";
+        div = document.getElementById(id);
+        canvas.width  = 50;
+        canvas.height = 70;
+      var rot=Math.PI/2*3;
+      var x=cx;
+      var y=cy;
+      var step=Math.PI/spikes;
+      
+      
+      ctx.clearRect(0, 0, 500, 500);
+      ctx.beginPath();
+      ctx.moveTo(cx,cy-outerRadius)
+      for(i=0;i<spikes;i++){
+        x=cx+Math.cos(rot)*outerRadius;
+        y=cy+Math.sin(rot)*outerRadius;
+        ctx.lineTo(x,y)
+        rot+=step
+
+        x=cx+Math.cos(rot)*innerRadius;
+        y=cy+Math.sin(rot)*innerRadius;
+        ctx.lineTo(x,y)
+        rot+=step
+        
+      }
+      ctx.lineTo(cx,cy-outerRadius);
+      ctx.closePath();
+      ctx.lineWidth=3;
+      ctx.strokeStyle='orange';
+      ctx.stroke();
+      
+      ctx.fillStyle='orange';
+      ctx.fill();
+      div.appendChild(canvas);
+      
+    }   
+function drawStar(cx,cy,spikes,outerRadius,innerRadius,id){
+	 var canvas = document.createElement('canvas');
+        ctx=canvas.getContext("2d");
+        if(id == '1')
+        	ctx1 = ctx;
+        else if(id == '2')
+        	ctx2 = ctx;
+        else if(id == '3')
+        	ctx3 = ctx;
+        else if(id == '4')
+        	ctx4 = ctx;
+        else if(id == '5')
+        	ctx5 = ctx;
+        canvas.id = "lol";
+        div = document.getElementById(id);
+        canvas.width  = 50;
+        canvas.height = 70;
+      var rot=Math.PI/2*3;
+      var x=cx;
+      var y=cy;
+      var step=Math.PI/spikes;
+      
+      
+      ctx.clearRect(0, 0, 500, 500);
+      ctx.beginPath();
+      ctx.moveTo(cx,cy-outerRadius)
+      for(i=0;i<spikes;i++){
+        x=cx+Math.cos(rot)*outerRadius;
+        y=cy+Math.sin(rot)*outerRadius;
+        ctx.lineTo(x,y)
+        rot+=step
+
+        x=cx+Math.cos(rot)*innerRadius;
+        y=cy+Math.sin(rot)*innerRadius;
+        ctx.lineTo(x,y)
+        rot+=step
+        
+      }
+      ctx.lineTo(cx,cy-outerRadius);
+      ctx.closePath();
+      ctx.lineWidth=3;
+      ctx.strokeStyle='orange';
+      ctx.stroke();
+      
+      ctx.fillStyle='white';
+      ctx.fill();
+      if(div != null)
+      div.appendChild(canvas);
+      else{
+      div = document.getElementById(id);
+      }
+    }   // try cookies and local storage
+
+    //create a new dic and put all the div elements inside that
+
+</script>
+</head>
+<body onload ="myfunc()" >
+<div id = "1" class = "a" style="float:left" onclick='newstar(1)'><div id="sidebar1" style = "position:relative; left:10px; top:80px;">             poor</div></div>
+<div id = "2" class = "b" style="float:left" onclick='newstar(2)'><div id="sidebar2" style = "position:relative; left:10px; top:80px;">bad</div></div>
+<div id = "3" class = "c" style="float:left" onclick='newstar(3)'><div id="sidebar3" style = "position:relative; left:10px; top:80px;">average</div></div>
+<div id = "4" class = "d" style="float:left" onclick='newstar(4)'><div id="sidebar4" style = "position:relative; left:10px; top:80px;">good</div></div>
+<div id = "5" class = "e" style="float:left" onclick='newstar(5)'><div id="sidebar5" style = "position:relative; left:10px; top:80px;">Excellent</div></div>
+</div>
+
+
+<button id="Rate_again" value="Rate Again" style = "position:relative; left:-200px; top:100px;" onclick="window.location.reload()">Rate Again</button>
+<button id="Submit" value="Submit" style = "position:relative; left:-190px; top:100px;" onclick="alert('Thank you for submitting')">Submit</button>
+
+
+</body>
+</html>
